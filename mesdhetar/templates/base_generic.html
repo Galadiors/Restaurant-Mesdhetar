@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Codigos script con duda-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  {% block title %}<title>Inicio | Mesdhetar</title>{% endblock %} 
+  <!-- Add additional CSS in static file -->
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}"><!--Link css de la profe-->
+  <!--Comienzo de insertos de codigo css-->
+  <link href="{% static 'https://fonts.googleapis.com/css?family=Quicksand&display=swap' %}" rel="stylesheet">
+  <link href="{% static 'https://fonts.googleapis.com/css?family=Montserrat&display=swap' %}" rel="stylesheet">
+  <link href="{% static 'https://fonts.googleapis.com/css?family=Pacifico&display=swap' %}" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+  <link rel="stylesheet" href="{% static 'css/slidePrueba.css' %}">
+  <link rel="stylesheet" href="{% static 'css/font.css' %}">
+</head>
+
+<body>
+<header class="main-header">
+  <div class="container container--flex">
+      <div class="column--logo">
+          <a class="column__txt__footer" href="index.html"><h1 class="logo">Mesdhetar</h1></a>
+      </div>
+
+      <nav class="main-nav">
+          <div class="container container--flex">
+              <span class="icon-menu" id="btnmenu"></span>
+              {% block sidebar %}
+              <ul class="menu" id="menu">
+                  <li><a href="#" class="menu__link menu__link--select">Inicio</a></li>
+                  <li><a href="menu.html" class="menu__link">Menú</a></li>
+                  <li><a href="nosotros.html" class="menu__link">Nosotros</a></li>
+                  <li><a href="reserva.html" class="menu__link">Reservación</a></li>
+              </ul>
+              {% endblock %}
+            </div>
+      </nav>
+  </div>
+</header>
+{% block content %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,51 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<div class="banner">
+        {% load static %}
+    <div class="slideshow">
+        <ul class="slider">
+            <li>
+                <img src="{% static 'img/restaurant4.jpg' %}" alt="">
+                <section class="caption">
+                    <h2>Calidad</h2>
+                    <!-- <p>Nos destacamos por el buen gusto ya la calidad de nuestros platos</p> -->
+                </section>
+            </li>
+            <li>
+                <img src="{% static 'img/restaurant3.jpg' %}" alt="">
+                <section class="caption">
+                    <h2>Comodidad</h2>
+                    <!-- <p>Lugar amplio y con un paisaje privilegiado</p> -->
+                </section>
+            </li>
+            <li>
+                <img src="{% static 'img/restaurant2.jpeg' %}" alt="">
+                <section class="caption">
+                    <h2>Variedad</h2>
+                    <!-- <p>Tenemos una amplia gama de platos para ofrecerte</p> -->
+                </section>
+            </li>
+            <li>
+                <img src="{% static 'img/restaurant1.jpeg'}" alt="">
+                <section class="caption">
+                    <h2>Sabor</h2>
+                    <!-- <p>No tenemos competencia...</p> -->
+                </section>
+            </li>
+        </ul>
+
+        <ol class="pagination">
+        </ol>
+    
+        <div class="left">
+            <span class="fa fa-chevron-left"></span>
+        </div>
+
+        <div class="right">
+            <span class="fa fa-chevron-right"></span>
+        </div>
+    </div>
+</div>
+{% endblock %}

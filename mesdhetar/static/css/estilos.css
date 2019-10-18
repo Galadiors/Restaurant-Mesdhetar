@@ -1,0 +1,1047 @@
+/*--Sector que ajusta el estilo general--*/
+*{
+    box-sizing: border-box; /*el ancho es a la caja en si */
+    margin: 0;
+}
+
+body{
+    /* font-family: 'Quicksand', sans-serif; */
+    font-family: "montserrat",sans-serif;
+    /* background: #ecf0f1; */
+}
+
+/*--Formato y estilo del menu general--*/
+
+.btnes{
+    background: none;
+    /* border: 1px solid #ddd; */
+    font-family: "montserrat",sans-serif;
+    text-transform: uppercase;
+    min-width: 200px;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    position: relative;
+    display: block;
+    width: 120px;
+    margin: 10px auto;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    z-index: 1000;
+  }
+
+  .btnes:hover{
+    color: #fff;
+  }
+  .btnes::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #c0392b;
+    z-index: -1000;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+  }
+  .btnes1::before{
+    transform: scaleX(0);
+  }
+  .btnes1:hover::before{
+    transform: scaleX(1);
+  }
+
+/*-----------TAB CONTAINER MENU------*/
+.tab-container .button-container button{/*--Construccion general del tab--*/
+    width: 25%;
+    height: 100%;
+    float: left;
+    border: none;
+    outline:none;
+    cursor: pointer;
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: 18px;
+    background-color: #ddd;
+}
+.tab-container .button-container button:hover{
+    background-color: #c0392b;
+    color: #f1f1f1;
+}
+
+.img--menu{/*--Dispocicion de la imagen--*/
+    display: block;
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8%;
+}
+
+.media-left{
+    width: 110px;
+    height: 110px;
+    padding-right: 10px;
+}
+
+.media-body{
+    font-size: 20px;
+    text-align: left;
+}
+
+.media-body h4{
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #222;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.media-body h6{
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    line-height: 20px;
+    color: #DE423A;
+    font-family: 'Quicksand', sans-serif;
+}
+.media-body p{
+    margin-top: 10px;
+    font-size: 14px;
+    color: black;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+.media-left, .media-body{
+    display: table-cell;
+    vertical-align: top;
+}
+
+.fila-comida{
+    border-bottom: 1px dashed #ccc;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+
+/* -----------------------PAGINA RESERVA---------------*/
+
+
+/* body {
+    background: #181818;
+    color: #fff;
+    line-height: 1.6;
+    font-family: 'Quicksand', sans-serif;
+    padding: 0 1.5em;
+} */
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.caja-reserva {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .8);
+    color: #fff;
+    line-height: 1.6;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.caja-reserva > * {
+    padding: 1em; /*aun no se que hace*/
+}
+
+.contact-form {
+    background: #222;
+}
+
+.contact-form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-form form label {
+    display: block;
+}
+
+.contact-form form p {
+    margin: 0;
+    padding: 1em;
+}
+
+.contact-form form .block {
+    grid-column: 1 / 3;
+}
+
+.contact-form form button,
+.contact-form form input{
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: 0;
+    color: #fff;
+    border-bottom: 1px solid #d63031;
+}
+
+.contact-form form button {
+    background: #DE423A;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+.contact-form form button:hover,
+.contact-form form button:focus {
+    background: #c0392b;
+    color: #fff;
+    transition: background-color 1s ease-out;
+    outline: 0;
+}
+
+/* CONTACT INFO */
+.contact-info {
+    /* background: #000; */
+    background: #c0392b;
+}
+
+.contact-info h4, .contact-info ul, .contact-info p {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+.container__formulario{
+    margin-bottom: 20px;
+}
+
+/* LARGE SIZE */
+@media(min-width: 700px) {
+
+    .caja-reserva {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    .caja-reserva > * {
+        padding: 2em;
+    }
+    .contact-info h4,
+    .contact-info ul,
+    .contact-info p {
+        text-align: left;
+    }
+}
+
+
+/* ------estilos base--------- */
+
+img{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+
+.container{
+    width: 100%;
+    margin: auto;
+}
+
+.container__comida{
+    /* margin-top: 40px; */
+    padding: 5px;
+}
+
+.container--flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.column{
+    width: 100%;
+}
+
+.container__invitacion{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+    color:white;
+    background: #DE423A;
+}
+
+/* ------estilos header--------- (primero a celular)*/
+.main-header{
+    width: 100%;
+    background: #222;
+}
+
+.logo{
+    font-size: 1.8rem;
+    color: white;
+    padding: 10px;
+    font-family: 'Pacifico', cursive;
+    font-weight: 100; /*quita grosor al texto*/
+    text-align: center;
+}
+
+.column--logo{
+    width: 100%;
+    text-align: center;
+}
+
+.main-nav{
+    width: 70%;
+    position: relative;
+    z-index: 2000; /*con esto se logra ver el menu al desplegarse en responsive*/
+    padding: 10px;
+}
+
+
+/* ------estilos del menu---------*/
+
+.icon-menu{
+    display: block;
+    color: white;
+    border: 1px solid white;
+    border-radius: 3px;
+    width: 40px;
+    height: 40px;
+    line-height: 45px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.social-icon{
+    margin-top: 10px;
+    justify-content: flex-start;
+    display: flex;
+    max-width: 700px;
+}
+
+.social-icon a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #f1f1f1;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    transition: 0.4s all;
+    line-height: 38px;
+    cursor: pointer;
+    background: #314652;
+    border-radius: 50%;
+    margin-right: 3px;
+}
+
+.social-icon a:hover{
+    transform: scale(1.2);
+}
+
+.menu{
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background: #222;
+    text-align: center;
+    height: 0px;
+    overflow: hidden;
+    transition: height .5s linear;
+}
+
+.menu__link{
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu__link:hover{
+    background: #c0392b;
+}
+
+.menu__link--select{
+    background: #DE423A;
+}
+
+.menu__link--select:hover{
+    background: #c0392b;
+}
+
+.mostrar{
+    height: 196px;
+}
+
+.img--comida{
+    width: 450px;
+    height: 350px;
+    display: block;
+    margin: auto;
+    object-fit: cover;
+    border: 5px solid #ddd; 
+    padding: 5px;
+}
+
+.main__about__nosotros{
+    margin-top: 20px;
+}
+
+.main__about__nosotros h3{
+    line-height: 28px;
+    font-size: 21px;
+    text-align: left;
+    font-family: 'montserrat';
+    font-weight: 500;
+}
+
+.main__about__nosotros p{
+    margin-top: 10px;
+    font-family: inherit;
+    color: #666666;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.main__about__nosotros img{
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin: auto;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.main__about__nosotros a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    width: 160px;
+    background: #DE423A;
+    padding:15px 20px;
+    margin: 20px auto;
+    color: white;
+}
+
+.main__about__nosotros a:hover{
+    background-color: #c0392b;
+    color: white;
+}
+
+
+/* ------estilos del menu---------*/
+
+.banner{
+    position: relative;
+}
+
+.banner:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+    top: 0;
+}
+
+/* -------------ESTILOS MAIN PAGINA MENU ---------*/
+
+.column__txt__footer{  
+    text-align: center;
+}
+
+.tab-container{
+    width: 100%;
+    height: 1100px;/*a modificar*/
+}
+
+.tab-container .button-container{
+    height: 10%;
+}
+
+.tab-container .tab-panel{
+    height: 90%;
+    background-color: rgb(197, 42, 42);
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 22px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+
+/* ------estilos principales---------*/
+
+.group--color .container{
+    background: #DE423A;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.main__title{
+    margin: 15px 0;
+    font-size: 1.8rem;
+    font-family: 'Pacifico', cursive;
+    font-weight: 100;
+}
+
+.container__invitacion p{
+    margin: 15px 0;
+    font-size: 1.8rem;
+    font-family: 'Pacifico', cursive;
+    font-weight: 100;
+}
+
+.tittle-basic{
+    font-size: 1.8rem;
+    font-family: 'Pacifico', cursive;
+    font-weight: 100;
+}
+
+.column__title{
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.column--menu{
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+
+.main__about__description .column:nth-child(2){
+    padding: 10px;
+}
+
+.main__about__description .container__comida:nth-child(1){
+    background: #f7f7f7;
+}
+
+.main__about__description .container__comida:nth-child(2){
+    background: #eeeeee;
+}
+
+.main__about__description .container__comida:nth-child(3){
+    background: #f7f7f7;
+}
+
+.btn{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    width: 120px;
+    background: #DE423A;
+    padding: 10px;
+    margin: 10px auto;
+    color: white;
+}
+
+.group-chef .column{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.group-chef__img{
+    margin: auto;
+    max-width: 350px;
+}
+
+.group-chef__title{
+    font-size: 1.3rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #DE423A;
+}
+
+.group-chef__price{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.main__about__menu{
+    margin-top: 0px;
+}
+
+.group-chef .container--flex{
+    align-items: flex-start; 
+}
+
+
+/* ------estilos del footer---------*/
+
+.main-footer{
+    background: #222;
+    color: white;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: .8rem;
+}
+
+.copy{
+    text-align: center;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.column__txt__footer__redes{
+    text-align: left;
+}
+
+.column__txt__footer{
+    text-align: left;
+    text-decoration: none; 
+    color: white;
+}
+
+
+
+/* -------------------------------ESTILOS RESPONSIVE---------------------*/
+
+@media screen and (min-width: 510px){
+    .logo{
+        color: white;
+        text-align: center;
+    }
+
+    /* .main{
+        padding-bottom: 15px;
+    } */
+
+    .main__about__description .column:nth-child(2){
+        padding-left: 20px;
+        font-size: 1rem;
+    }
+
+    .column__title{
+        text-align: start;
+        font-size: 1rem;
+    }
+
+
+    .main__about__description .btn{
+        margin: 0;
+        margin-top: 10px;
+    }
+
+    .main__about__description .container__comida:nth-child(2) .column--50:nth-child(1){
+        order: 1;
+    }
+
+    .main__about__description .container__comida:nth-child(2) .column--50:nth-child(2){
+        padding-left: 60px;
+        display:inline-block;
+		vertical-align:middle;
+    }
+
+    .group-chef .column{
+        border: 1px solid #ddd; 
+        padding: 5px;
+    }
+
+    .group-chef__img{
+        height: 200px;
+        object-fit: cover;/**para no deformar la imagen*/
+    }
+
+    .column--50{
+        width: 49%;
+    }
+
+    .column--50--25{
+        width: 49%;
+    }
+
+    .column--33{
+        width: 33%;
+        height: 120px;
+    }
+
+    .column--menu{
+        width: 100%;
+    }
+
+    .column__txt__footer__redes{
+        text-align: left;
+    }
+
+    .social-icon{
+        margin-top: 10px;
+        justify-content: space-around;
+        display: flex;
+        max-width: 700px;
+    }
+    
+    .social-icon a{
+        text-decoration: none;
+        font-size: 1.3rem;
+        color: #f1f1f1;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        transition: 0.4s all;
+        line-height: 38px;
+        cursor: pointer;
+        background: #314652;
+        border-radius: 50%;
+    }
+    
+    .social-icon a:hover{
+        transform: scale(1.2);
+    } 
+
+    .column__txt__footer{  
+        text-align: center;
+    }
+
+    .tab-container{
+        width: 100%;
+        height: 950px;/*a modificar*/
+    }
+    
+    .tab-container .button-container{
+        height: 10%;
+    }
+    
+    .tab-container .tab-panel{
+        height: 90%;
+        background-color: gray;
+        color: white;
+        text-align: center;
+        padding-top: 40px;
+        box-sizing: border-box;
+        font-family: sans-serif;
+        font-size: 22px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 795px){
+
+    .container{
+        width: 90%;
+    }
+
+    /*--------HEADER----------*/
+    .logo{
+        color: white;
+        text-align: left;
+    }
+
+    .column--menu{
+        width: 49%;
+        padding-bottom: 0;
+    }
+
+    .column--logo{
+        width: auto;
+    }
+
+    .main-nav{
+        padding: 20px;
+    }
+
+    .main-nav .container--flex{
+        justify-content: flex-end;
+    }
+
+    .icon-menu{
+        display: none;
+    }
+
+    .menu{
+        display: flex;
+        height: auto;
+        position: static; /*para que vuelva a su posicion original ya que era absolute*/
+        width: auto;
+    }
+
+    .menu__link{
+        padding: 20px;
+    }
+
+    /*--------MAIN----------*/
+
+    .group--color .container{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 20px;
+    }
+
+    .main__title{
+        font-size: 2.2rem;
+    }
+
+    .main__about__description{
+        margin-top: 30px;
+    }
+    
+    .main__about__menu{
+        margin-top: 30px;
+    }
+
+    /* .main__about__description .column--50:nth-child(2){
+        font-size: 1rem;
+    } */
+
+    .main__about__description .column--50:nth-child(2) .column__txt{
+        line-height: 30px;
+        
+    }
+
+    .column--50--25{
+        width: 24.5%;
+    }
+
+    .column__title{
+        font-size: 1rem;
+    }
+
+    .column__title__footer{
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .title__footer{
+        font-family: 'Pacifico', cursive;
+        font-weight: 100;
+        text-align: center;
+    }
+
+    .column__txt__footer__redes{
+        text-align: center;
+    }
+
+    .social-icon{
+        margin-top: 10px;
+        justify-content: space-around;
+        display: flex;
+        max-width: 700px;
+    }
+    
+    .social-icon a{
+        text-decoration: none;
+        font-size: 1.3rem;
+        color: #f1f1f1;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        transition: 0.4s all;
+        line-height: 38px;
+        cursor: pointer;
+        background: #314652;
+        border-radius: 50%;
+    }
+    
+    .social-icon a:hover{
+        transform: scale(1.2);
+    }
+
+    .tab-container{
+        width: 100%;
+        height: 570px;/*a modificar*/
+    }
+    
+    .tab-container .button-container{
+        height: 10%;
+    }
+    
+    .tab-container .tab-panel{
+        height: 90%;
+        background-color: gray;
+        color: white;
+        text-align: center;
+        padding-top: 40px;
+        box-sizing: border-box;
+        font-family: sans-serif;
+        font-size: 22px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+}
+
+@media screen and (min-width: 1024px){
+    
+    .container{
+        width: 90%;
+    }
+
+    .logo{
+        font-size: 2rem;
+        padding: 0;
+    }
+
+    .main__title{
+        font-size: 2.5rem;
+    }
+
+    .group-chef__title{
+        font-size: 1.4rem;
+    }
+
+    .group-chef__price{
+        font-size: 1.3rem;
+        line-height: 28px;
+        text-align: left;
+        font-family: 'montserrat';
+        font-weight: 500;
+    }
+
+  
+
+    .column__txt{
+        line-height: 30px;
+        font-family: 'Quicksand', sans-serif;
+
+    }
+
+    .main__about__description .container__comida:nth-child(2) .column--50:nth-child(2){
+        padding-left: 120px;
+    }
+
+    /*------------FOOTER-------------*/
+
+    .main-footer{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .column__title__footer{
+        /* padding-top: 10; */
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .column--flex{
+        display: flex;
+        justify-content: space-evenly;
+        align-content: center;
+        flex-direction: row;
+        padding-top: 10px;
+    } 
+    
+    .container__invitacion .btn{
+        margin: 20px auto;
+    }
+
+    .icono1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fecc17;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+    }
+
+    .icono2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ccdb38;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+    }
+    
+    .icon-phone{
+        color: rgb(255, 255, 255);
+    }
+
+    .icon-reloj{
+        /* padding-top: 15px; */
+        /* font-size: 35px; */
+        /* line-height: 70px; */
+        color: rgb(255, 255, 255);
+    }
+
+    .info{
+        display: flex;
+        align-items: center;
+        margin-top: 40px;
+    }
+
+    .texto{
+        margin-left: 20px;
+    }
+
+    .datepicker{
+        cursor:pointer !important;
+        float:left;
+        height:16px;
+        margin:.1em 5px 0 0;
+        padding:0;
+        width:16px;
+    }
+
+    /* .container__formulario .formulario{
+        background: #DE423A;
+    } */
+
+     .social-icon{
+        margin-top: 10px;
+        justify-content: space-around;
+        display: flex;
+        max-width: 700px;
+    }
+    
+    .social-icon a{
+        text-decoration: none;
+        font-size: 1.3rem;
+        color: #f1f1f1;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        transition: 0.4s all;
+        line-height: 38px;
+        cursor: pointer;
+        background: #314652;
+        border-radius: 50%;
+    }
+
+    .social-icon a:hover{
+        transform: scale(1.2);
+    } 
+
+    .tab-container{
+        width: 100%;
+        height: 550px;/*a modificar*/
+    }
+    
+    .tab-container .button-container{
+        height: 12%;
+    }
+    
+    .tab-container .tab-panel{
+        height: 88%;
+        background-color: gray;
+        color: white;
+        text-align: center;
+        padding-top: 40px;
+        box-sizing: border-box;
+        font-family: sans-serif;
+        font-size: 22px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+}
+
